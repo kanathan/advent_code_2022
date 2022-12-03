@@ -64,12 +64,12 @@ fn play_round(elf: Elf, player: Player) -> u64 {
     match (elf, player) {
         (Elf::A_Rock, Player::X_Rock)           => 1 + 3,
         (Elf::A_Rock, Player::Y_Paper)          => 2 + 6,
-        (Elf::A_Rock, Player::Z_Scissors)       => 3 + 0,
-        (Elf::B_Paper, Player::X_Rock)          => 1 + 0,
+        (Elf::A_Rock, Player::Z_Scissors)       => 3,
+        (Elf::B_Paper, Player::X_Rock)          => 1,
         (Elf::B_Paper, Player::Y_Paper)         => 2 + 3,
         (Elf::B_Paper, Player::Z_Scissors)      => 3 + 6,
         (Elf::C_Scissors, Player::X_Rock)       => 1 + 6,
-        (Elf::C_Scissors, Player::Y_Paper)      => 2 + 0,
+        (Elf::C_Scissors, Player::Y_Paper)      => 2,
         (Elf::C_Scissors, Player::Z_Scissors)   => 3 + 3,
     }
 }
@@ -77,13 +77,13 @@ fn play_round(elf: Elf, player: Player) -> u64 {
 
 fn play_round_p2(elf: Elf, player: Player) -> u64 {
     match (elf, player) {
-        (Elf::A_Rock, Player::X_Rock)           => 3 + 0,
+        (Elf::A_Rock, Player::X_Rock)           => 3,
         (Elf::A_Rock, Player::Y_Paper)          => 1 + 3,
         (Elf::A_Rock, Player::Z_Scissors)       => 2 + 6,
-        (Elf::B_Paper, Player::X_Rock)          => 1 + 0,
+        (Elf::B_Paper, Player::X_Rock)          => 1,
         (Elf::B_Paper, Player::Y_Paper)         => 2 + 3,
         (Elf::B_Paper, Player::Z_Scissors)      => 3 + 6,
-        (Elf::C_Scissors, Player::X_Rock)       => 2 + 0,
+        (Elf::C_Scissors, Player::X_Rock)       => 2,
         (Elf::C_Scissors, Player::Y_Paper)      => 3 + 3,
         (Elf::C_Scissors, Player::Z_Scissors)   => 1 + 6,
     }
